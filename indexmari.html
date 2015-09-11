@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <title>E-Ticket</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- CSS -->
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700'>
+        <link rel="stylesheet" href="{%static 'bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{%static 'css/style.css' %}">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body onload="DameLaFechaHora()">
+
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="logo span4">
+                        <h1 class="green"><a href="" >E-Ticket App <span class="green">Sistema de Emisión de Multa.</span></a></h1>
+                    </div>
+                    <!-- // Si o si arreglar el deslogueo y que sea ver madafaka  
+                    <div class="links span8">
+                        <a class="home" href="" rel="tooltip" data-placement="bottom" data-original-title="Olvidaste tu Pass"></a>
+                        <a class="blog" href="" rel="tooltip" data-placement="bottom" data-original-title="Blog"></a>
+                    </div>  -->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="register-container container">
+            <div class="row">
+                <!-- Cambiar la foto del logo de la empresa o la aplicacion -->
+                <div class="iphone span5">
+                    <img src="{%static 'img/Logo Software Seekers Azul.png' %}" alt="">
+                </div>  
+                <div class="register span6">
+                    <form action="" method="post">
+                        <h2>INGRESA <span class="green"><strong>E-Ticket</strong></span></h2>
+                        <label for="Usuario">Usuario</label>
+                        <input type="text" id="Usuario" name="Usuario" placeholder="Ingrese Usuario..">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Ingrese Contraseña..">
+                        <a href=""><button id="login">INGRESAR</button></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script Language="JavaScript"> 
+        function DameLaFechaHora() { 
+            var hoy = new Date();
+            var hrs = hoy.getHours(); 
+            var min = hoy.getMinutes();
+            var day = hoy.getDate();
+            var month = hoy.getMonth();
+            var year = hoy.getFullYear();
+            
+            if (min < 10) {
+                document.getElementById("putHour").innerHTML = "Hora: " + hrs + ":" + "0" + min;
+            } else {
+                document.getElementById("putHour").innerHTML = "Hora: " + hrs + ":" + min;
+            }
+
+            document.getElementById("putDate").innerHTML = day + "/"+ (month + 1) +"/" + year;
+            
+        } 
+    </Script>
+        <!-- Javascrip3t -->
+        <script src="{% static 'js/jquery-1.8.2.min.js' %}"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{%static 'js/jquery.backstretch.min.js' %}"></script>
+        <script src="{%static 'js/scripts.js' %}"></script>
+        <script type="text/javascript" src="src/login.js"></script>
+
+    </body>
+
+</html>
+
+    
