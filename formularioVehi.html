@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="{%static 'ico/favicon.png' %}">
+
+    <title>E-Ticket | Vehiculo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{%static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{%static 'css/font-awesome.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{%static 'css/main.css' %}" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body onload="DameLaFechaHora()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://127.0.0.1:8000/paso3">BIENVENIDO</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+          	<li><a href="">Daniel Saucedo</a></li>
+          	<li><a href="" id="putDate"></a></li>
+          	<li><a href="" id="putHour"></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div id="green">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-8 col-lg-offset-2">
+				<h4>COMPLETE EL FORMULARIO DEL VEHICULO</b></h4>
+				</div>
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- blue wrap -->
+
+	<div class="container w">
+		<div class="row centered">
+
+			<div class="col-lg-6 col-sm-6 col-md-6" id="espacio">
+				<input class="form-control" id="losinput" type="text" placeholder="Dominio..">
+			</div>
+			<div class="col-lg-6 col-sm-6 col-md-6" id="espacio">
+				<button class="btn btn-success" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Verificar Datos <span class="glyphicon glyphicon-search"></span></button>
+			</div><!-- col-lg-3 -->
+
+		</div>
+	</div>
+
+	<br><br>
+
+	<div class="collapse" id="collapseExample">
+		<div class="well">
+			<div id="oculto" >
+			<div class="container w">
+				<div class="row centered">
+					<h3>Este vehiculo no fue encontrado en nuestra base de datos <span class="label label-default">Por favor ingrese los datos</span></h3>
+				</div>
+			</div>
+			<div class="container w">
+				<div class="row centered">
+					<br><br> 
+
+					<div class="col-lg-6 col-sm-6 col-md-6" id="espacio">
+						<input class="form-control" id="losinput"type="text" placeholder="Apellido del Propietario..">
+					</div><!-- col-lg-3 -->
+
+					<div class="col-lg-6 col-sm-6 col-md-6" id="espacio">
+						<input class="form-control" id="losinput" type="text" placeholder="DNI del Propietario..">
+					</div><!-- col-lg-3 -->
+
+					<div class="col-lg-6 col-sm-6 col-md-6" id="espacio">
+						<div class="dropdown">
+						  <select class="form-control">
+						  	<option>Seleccione el Vehiculo..</option>
+						    <option>Volkswagen</option>
+						    <option>Ford</option>
+						    <option>Fiat</option>
+						    <option>Peugeot</option>
+						    <option>BMW</option>
+						    <option>Toyota</option>
+						  </select>
+						</div>
+					</div><!-- col-lg-3 -->
+
+					<div class="col-lg-6 col-sm-6 col-md-6" id="espacio" >
+						<input class="form-control" id="losinput" type="text" placeholder="Color..">
+					</div><!-- col-lg-3 -->
+
+					<div class="col-lg-6 col-sm-6 col-md-6" id="espacio">
+						<input class="form-control" id="losinput" type="text" placeholder="Modelo..">
+					</div><!-- col-lg-3 -->
+
+					<div class="col-lg-6 col-sm-6 col-md-6" id="espacio">
+						<div class="dropdown">
+						  <select class="form-control">
+						  	<option>Seleccione el tipo de Vehiculo..</option>
+						    <option>Auto</option>
+						    <option>Motocicleta</option>
+						    <option>Camion</option>
+						    <option>Utilitario</option>
+						    <option>Carga</option>
+						    <option>Trafic</option>
+						  </select>
+						</div>
+					</div><!-- col-lg-3 -->
+
+
+				</div><!-- row -->
+				<br>
+				<br>
+			</div><!-- container -->
+
+			<!-- PRICING SECTION -->
+				<div id="dg">
+					<div class="container">
+						<div class="row centered">
+							<h4>Confirme los Datos</h4>
+							<br>
+							<div class="col-sm-6">
+			                    <!-- START PRICING TABLE -->
+			                    <div class="pricing-option">
+			                     <a href="http://127.0.0.1:8000/paso11/" class="pricing-signup">Aceptar  <span class="glyphicon glyphicon-ok"></span></a>
+			                    </div><!-- /pricing-option -->
+			                    <!-- END PRICING TABLE -->
+							</div><!-- /col -->
+							
+							<div class="col-sm-6">
+			                    <!-- START PRICING TABLE -->
+			                    <div class="pricing-option">
+			                        <a href="http://127.0.0.1:8000/paso4/" id="cancelar" class="pricing-signup">Cancelar  <span class="glyphicon glyphicon-remove"></span></a>
+			                    </div><!-- /pricing-option -->
+			                    <!-- END PRICING TABLE -->
+							</div><!-- /col -->
+							
+						</div><!-- row -->
+					</div><!-- container -->
+				</div><!-- DG -->
+
+			</div>
+		</div>
+	</div>	
+	
+	
+	<div id="r">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-8 col-lg-offset-2">
+					<h4>E-Ticket es una Aplicacion desarrollada por <a href="http://swseeker.hol.es/Clean/"target="_blank">Software Seeker</a> all Right Reserved.</h4>
+				</div>
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><! -- r wrap -->
+	
+	
+	<!-- FOOTER -->
+	<div id="f">
+		<div class="container">
+			<div class="row centered">
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="https://www.facebook.com/SoftwareSeekers"target="_blank"><i class="fa fa-facebook"></i></a>
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- Footer -->
+
+
+	<!-- MODAL FOR CONTACT -->
+	<!-- Modal1 -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title" id="myModalLabel">Ingresa el Otro tipo de Vehiculo</h4>
+	      </div>
+	      <div class="modal-body">
+		        <div class="row centered">
+		        	<div class="col-lg-12 col-sm-12 col-md-12" id="espacio" >
+						<input class="form-control" id="losinput" type="text" placeholder="Tipo de Vehiculo..">
+					</div><!-- col-lg-3 -->	
+		        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Guardar</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<!-- Modal2 -->
+	<div class="modal fade" id="myModalAuto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title" id="myModalLabel">Ingresa la Marca del Vehiculo</h4>
+	      </div>
+	      <div class="modal-body">
+		        <div class="row centered">
+		        	<div class="col-lg-12 col-sm-12 col-md-12" id="espacio" >
+						<input class="form-control" id="losinput" type="text" placeholder="Marca del Vehiculo..">
+					</div><!-- col-lg-3 -->	
+		        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Guardar</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<script Language="JavaScript"> 
+   		function DameLaFechaHora() { 
+   			var hoy = new Date();
+      		var hrs = hoy.getHours(); 
+      		var min = hoy.getMinutes();
+      		var day = hoy.getDate();
+      		var month = hoy.getMonth();
+      		var year = hoy.getFullYear();
+     		
+     		if (min < 10) {
+     			document.getElementById("putHour").innerHTML = "Hora: " + hrs + ":" + "0" + min;
+     		} else {
+     			document.getElementById("putHour").innerHTML = "Hora: " + hrs + ":" + min;
+     		}
+
+     		document.getElementById("putDate").innerHTML = day + "/"+ (month + 1) +"/" + year;
+     		
+   		} 
+	</Script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="{%static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{%static 'bootstrap/js/scripts.js' %}"></script>
+    <script type="text/javascript">
+		function mostrar(){
+		document.getElementById('oculto').style.display = 'block';}
+	</script>
+  </body>
+</html>
+
